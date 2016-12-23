@@ -12,4 +12,5 @@ Testen | 5 Stunden | 250€
 
 # Paper Prototype
 
-The paper prototype of the can be seen here: https://github.com/SKogelnik/resifo-android/blob/master/Documents/paper_prototype.pdf
+The paper prototype can be seen here:
+https://github.com/SKogelnik/resifo-android/blob/master/Documents/paper_prototype.pdf
