@@ -1,10 +1,6 @@
 # Team members:
 
-**Schopper Fabian:** Team Leader, Coding
+**Schopper Fabian:** Team Leader, Coding, Design, Testing, Documentation
 
-**Kogelnik Stefan:** Code Owner, Coding
-
-**Robatsch René:** Structure Design, Coding
-
-**Zsifkovits Markus:** Documentation, Interface Testing, Coding
+**Kogelnik Stefan:** Code Owner, Coding, Design, Testing, Documentation
 
