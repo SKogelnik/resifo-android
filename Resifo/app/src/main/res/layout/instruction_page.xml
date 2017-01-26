@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="hier steht mal eine anleithier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleituhier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitungngung"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/instructionText"
+            android:layout_weight="1"
+            android:layout_margin="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:text="OK, Ich habe verstanden"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/understandButton" />
+    </LinearLayout>
+
+</LinearLayout>
