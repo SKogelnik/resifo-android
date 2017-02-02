@@ -5,9 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-/**
- * Created by Stefan on 02.02.2017.
- */
 
 public class InputThreeActivity extends Activity{
 
@@ -17,8 +14,8 @@ public class InputThreeActivity extends Activity{
         setContentView(R.layout.travel3_page);
     }
 
-    public void onUnderstand(View view) {
-        Intent myIntent = new Intent(this, InputOneActivity.class);
+    public void onNextPage(View view) {
+        Intent myIntent = new Intent(this, InputFourActivity.class);
 
         this.startActivity(myIntent);
     }
