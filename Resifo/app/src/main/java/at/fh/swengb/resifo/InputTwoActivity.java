@@ -6,17 +6,19 @@ import android.os.Bundle;
 import android.view.View;
 
 
-public class InputOneActivity extends Activity {
+public class InputTwoActivity extends Activity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.input1_page);
+        setContentView(R.layout.religion2_page);
     }
 
+    public void onUnderstand(View view) {
+        Intent myIntent = new Intent(this, InputThreeActivity.class);
 
-    public void onNextPage(View view) {
-        Intent intent = new Intent(this, InputTwoActivity.class);
-        startActivity(intent);
+        this.startActivity(myIntent);
     }
+
 }
