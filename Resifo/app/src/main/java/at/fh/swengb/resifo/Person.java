@@ -1,14 +1,16 @@
 package at.fh.swengb.resifo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Person {
+public class Person implements Serializable{
 
     //Person
     String nachname;
     String vorname;
-    String frauenname;
-    Date geburtsdatum;
+    String oldNachname;
+    String geburtsdatum; //DATE(?)
+    String geburtsort;
     String geschlecht;
     String religion;
     String nation;
@@ -26,24 +28,17 @@ public class Person {
     String ort;
 
 
-    public Person(String nachname, String vorname, String frauenname, Date geburtsdatum, String geschlecht, String religion, String nation, String zmr, Integer dokNummer, Date ausstellDat, String ausstelBeh, String strasse, Integer hausnr, Integer plz, String ort) {
-        this.nachname = nachname;
-        this.vorname = vorname;
-        this.frauenname = frauenname;
-        this.geburtsdatum = geburtsdatum;
-        this.geschlecht = geschlecht;
-        this.religion = religion;
-        this.nation = nation;
-        this.zmr = zmr;
-        this.dokNummer = dokNummer;
-        this.ausstellDat = ausstellDat;
-        this.ausstelBeh = ausstelBeh;
-        this.strasse = strasse;
-        this.hausnr = hausnr;
-        this.plz = plz;
-        this.ort = ort;
+    public Person() {
+
     }
 
+    public String getGeburtsort() {
+        return geburtsort;
+    }
+
+    public void setGeburtsort(String geburtsort) {
+        this.geburtsort = geburtsort;
+    }
 
     public String getNachname() {
         return nachname;
@@ -61,19 +56,19 @@ public class Person {
         this.vorname = vorname;
     }
 
-    public String getFrauenname() {
-        return frauenname;
+    public String getOldNachname() {
+        return oldNachname;
     }
 
-    public void setFrauenname(String frauenname) {
-        this.frauenname = frauenname;
+    public void setOldNachname(String frauenname) {
+        this.oldNachname = frauenname;
     }
 
-    public Date getGeburtsdatum() {
+    public String getGeburtsdatum() {
         return geburtsdatum;
     }
 
-    public void setGeburtsdatum(Date geburtsdatum) {
+    public void setGeburtsdatum(String geburtsdatum) {
         this.geburtsdatum = geburtsdatum;
     }
 
