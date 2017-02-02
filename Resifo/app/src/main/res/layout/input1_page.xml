@@ -22,9 +22,7 @@
             android:inputType="textImeMultiLine|textPersonName"
             android:ems="10"
             android:id="@+id/tfVorname"
-            android:layout_weight="1"
-            android:hint="dein Vorname"
-            tools:text="Vorname" />
+            android:layout_weight="1" />
 
     </LinearLayout>
 
@@ -46,8 +44,7 @@
             android:inputType="textNoSuggestions|textPersonName"
             android:ems="10"
             android:id="@+id/tfNachname"
-            android:layout_weight="1"
-            tools:text="Nachname" />
+            android:layout_weight="1" />
     </LinearLayout>
 
     <LinearLayout
@@ -68,8 +65,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/tfNameVorEhe"
-            android:layout_weight="1"
-            tools:text="Fam. Name vor Ehe" />
+            android:layout_weight="1" />
     </LinearLayout>
 
     <LinearLayout
@@ -90,8 +86,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/tfGeburtsdatum"
-            android:layout_weight="1"
-            tools:text="Geburtsdatum" />
+            android:layout_weight="1" />
     </LinearLayout>
 
     <LinearLayout
@@ -112,8 +107,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/tfGeburtsort"
-            android:layout_weight="1"
-            tools:text="Geburtsort" />
+            android:layout_weight="1" />
     </LinearLayout>
 
     <LinearLayout
