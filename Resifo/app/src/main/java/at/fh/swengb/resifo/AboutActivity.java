@@ -15,6 +15,10 @@ public class AboutActivity extends Activity{
         setContentView(R.layout.impressum);
 
         tvImpressum = (TextView)findViewById(R.id.tvIMPRESSUM);
-        tvImpressum.setText("TESTTEXT");
+        tvImpressum.setText(
+
+                "\n Gemacht von: \n \n \n Stefan Kogelnik \n Fabian Schopper \n \n \n \n \n Ein Projekt der \n FH Joanneum \n \n"
+
+        );
     }
 }
