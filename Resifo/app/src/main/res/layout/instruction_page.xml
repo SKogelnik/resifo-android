@@ -3,24 +3,24 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
 
         <TextView
             android:text="hier steht mal eine anleithier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleituhier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitunghier steht mal eine anleitungngung"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/instructionText"
             android:layout_weight="1"
             android:layout_margin="20dp" />
-    </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <Button
             android:text="OK, Ich habe verstanden"
