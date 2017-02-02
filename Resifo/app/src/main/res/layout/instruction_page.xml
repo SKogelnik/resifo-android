@@ -26,7 +26,8 @@
             android:text="OK, Ich habe verstanden"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/understandButton" />
+            android:id="@+id/understandButton"
+            android:onClick="onUnderstand" />
     </LinearLayout>
 
 </LinearLayout>
