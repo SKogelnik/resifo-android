@@ -9,6 +9,19 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:text="Unterkunft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvUnterkunft"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
             android:text="Straße"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

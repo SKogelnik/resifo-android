@@ -8,14 +8,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <EditText
+        <TextView
+            android:text="REISEDOKUMENT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text="REISEDOKUMENT"
-            android:ems="10"
-            android:id="@+id/reisedokument"
+            android:id="@+id/tfReisedokument"
             android:layout_weight="1" />
+
     </LinearLayout>
 
     <LinearLayout
