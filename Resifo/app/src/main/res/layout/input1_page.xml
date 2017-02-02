@@ -91,7 +91,8 @@
                 android:inputType="date"
                 android:ems="10"
                 android:id="@+id/tfGeburtsdatum"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:hint="dd.mm.yyyy" />
 
         </LinearLayout>
 

@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 
+import java.text.ParsePosition;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
@@ -38,13 +40,30 @@ public class InputOneActivity extends Activity {
         pers = new Person();
     }
 
+    boolean isLegalDate(String s) {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd.mm.yyyy");
+        sdf.setLenient(false);
+        return sdf.parse(s, new ParsePosition(0)) != null;
+    }
+
 
     public void onNextPage(View view) {
         //Befüllen des Personen Objekts
         pers.setVorname(tfVorname.getText().toString());
         pers.setNachname(tfNachname.getText().toString());
         pers.setOldNachname(tfOldNachname.getText().toString());
-        pers.setGeburtsdatum(tfGebDat.getText().toString()); //DATE(?)
+
+        if (isLegalDate(tfGebDat.getText().toString())) {
+            pers.setGeburtsdatum(tfGebDat.getText().toString()); //DATE(?)
+        }
+        else
+        {
+            tfGebDat = (EditText) findViewById(R.id.tfGeburtsdatum);
+            tfGebDat.setText("ungueltiges Datum");
+            //DONT START ACTIVITY(INTENT)
+
+        }
+
         pers.setGeburtsort(tfGebOrt.getText().toString());
 
         pers.setGeschlecht("männlich");
