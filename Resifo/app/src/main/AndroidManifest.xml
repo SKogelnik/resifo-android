@@ -8,29 +8,34 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" > 
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".InstructionActivity">
+        <activity android:name=".InstructionActivity" android:noHistory="true">
             <intent-filter>
                 <category android:name="android.intent.category.HOME" />
             </intent-filter>
         </activity>
-        <activity android:name=".InputOneActivity">
+        <activity android:name=".InputOneActivity" android:noHistory="true">
             <intent-filter>
                 <category android:name="android.intent.category.HOME" />
             </intent-filter>
         </activity>
-        <activity android:name=".InputTwoActivity">
+        <activity android:name=".InputTwoActivity" android:noHistory="true">
             <intent-filter>
                 <category android:name="android.intent.category.HOME" />
             </intent-filter>
         </activity>
-        <activity android:name=".InputThreeActivity">
+        <activity android:name=".InputThreeActivity" android:noHistory="true">
+            <intent-filter>
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".InputFourActivity" android:noHistory="true">
             <intent-filter>
                 <category android:name="android.intent.category.HOME" />
             </intent-filter>
