@@ -40,6 +40,11 @@
                 <category android:name="android.intent.category.HOME" />
             </intent-filter>
         </activity>
+        <activity android:name=".AboutActivity" android:noHistory="true">
+            <intent-filter>
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

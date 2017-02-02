@@ -58,7 +58,8 @@
                 android:text="Über"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/buttonShowContact" />
+                android:id="@+id/buttonShowContact"
+                android:onClick="onAbout" />
 
         </LinearLayout>
 
