@@ -79,6 +79,10 @@ public class SummaryActivity extends Activity{
 
     public void onSaveForm(View view)
     {
+        DBHandler db = new DBHandler(this);
+        db.addTable(pers);
 
+        Intent intent = new Intent(this, InputTwoActivity.class);
+        startActivity(intent);
     }
 }
