@@ -13,6 +13,7 @@ public class Person implements Serializable{
     String geburtsort;
     String geschlecht;
     String religion;
+    String familienstand;
     String nation;
     String zmr;
 
@@ -30,6 +31,14 @@ public class Person implements Serializable{
 
     public Person() {
 
+    }
+
+    public String getFamilienstand() {
+        return familienstand;
+    }
+
+    public void setFamilienstand(String familienstand) {
+        this.familienstand = familienstand;
     }
 
     public String getGeburtsort() {
