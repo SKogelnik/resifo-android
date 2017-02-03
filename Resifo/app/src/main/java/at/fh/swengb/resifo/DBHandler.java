@@ -111,21 +111,37 @@ public class DBHandler extends SQLiteOpenHelper {
         // Closing database connection
         db.close();
     }
-    /*
+
     //READ
     public Person getPerson(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(DATABASE_NAME, new String[] { KEY_ID,
-                        VORNAME, NACHNAME, ZMR }, KEY_ID + "=?",
+                        VORNAME, NACHNAME, NACHNAMEALT, GEBURTSTDATUM, GEBURTSORT, GESCHLECHT, RELIGION, FAMILIENSTAND, NATION, ZMR, DOKNUMMER, AUSSTELLDATUM, AUSSTELLBEHOERDE, STRASSE, HAUSNUMMER, PLZ, ORT }, KEY_ID + "=?",
                 new String[] { String.valueOf(id) }, null, null, null, null);
         if (cursor != null)
             cursor.moveToFirst();
-        Person contact = new Person(Integer.parseInt(cursor.getString(0)),
-                cursor.getString(1), cursor.getString(2));
+        Person pers = new Person();
+        pers.setVorname(cursor.getString(1));
+        pers.setNachname(cursor.getString(2));
+        pers.setOldNachname(cursor.getString(3));
+        pers.setGeburtsdatum(cursor.getString(4));
+        pers.setGeburtsort(cursor.getString(5));
+        pers.setGeschlecht(cursor.getString(6));
+        pers.setReligion(cursor.getString(7));
+        pers.setFamilienstand(cursor.getString(8));
+        pers.setNation(cursor.getString(9));
+        pers.setZmr(cursor.getString(10));
+        pers.setDokNummer(cursor.getString(11));
+        pers.setAusstellDat(cursor.getString(12));
+        pers.setAusstellBeh(cursor.getString(13));
+        pers.setStrasse(cursor.getString(14));
+        pers.setHausnr(cursor.getString(15));
+        pers.setPlz(cursor.getString(16));
+        pers.setOrt(cursor.getString(17));
 // return shop
-        return contact;
+        return pers;
     }
-*/
+
     // Deleting a person
     public void deletePerson(Person person) {
         SQLiteDatabase db = this.getWritableDatabase();
