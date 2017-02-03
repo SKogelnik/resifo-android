@@ -1,6 +1,7 @@
 package at.fh.swengb.resifo;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Person implements Serializable{

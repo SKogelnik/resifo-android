@@ -136,7 +136,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
 
     // Getting All Persons
-    public List<Person> getAllPersons() {
+    public List<List> getAllPersons() {
         List personList = new ArrayList<>();
 // Select All Query
         String selectQuery = "SELECT "+KEY_ID+","+VORNAME+","+NACHNAME+" FROM " + DATABASE_NAME;
