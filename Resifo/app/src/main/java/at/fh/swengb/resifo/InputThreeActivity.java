@@ -50,7 +50,7 @@ public class InputThreeActivity extends Activity{
         {
             if(isLegalDate(ausstellDat))
             {
-                pers.setDokNummer(Integer.parseInt(dokNummer));
+                pers.setDokNummer(dokNummer);
                 pers.setAusstellDat(ausstellDat);
                 pers.setAusstellBeh(behoerde);
 
@@ -60,7 +60,8 @@ public class InputThreeActivity extends Activity{
                 intent.putExtras(bundle);
                 startActivity(intent);
             }
-            Toast.makeText(this,"Ungültiges Datumsformat!", Toast.LENGTH_LONG).show();
+            else
+                Toast.makeText(this,"Ungültiges Datumsformat!", Toast.LENGTH_LONG).show();
         }
         else
             Toast.makeText(this,"Alle Felder ausfüllen!", Toast.LENGTH_LONG).show();

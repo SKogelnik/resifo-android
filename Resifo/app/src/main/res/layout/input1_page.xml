@@ -27,7 +27,8 @@
                 android:inputType="textImeMultiLine|textPersonName"
                 android:ems="10"
                 android:id="@+id/tfVorname"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:text="TestName" />
 
         </LinearLayout>
 
@@ -49,7 +50,8 @@
                 android:inputType="textNoSuggestions|textPersonName"
                 android:ems="10"
                 android:id="@+id/tfNachname"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:text="TestName" />
         </LinearLayout>
 
         <LinearLayout
@@ -70,7 +72,8 @@
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/tfNameVorEhe"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:text="TestName" />
         </LinearLayout>
 
         <LinearLayout
@@ -92,7 +95,8 @@
                 android:ems="10"
                 android:id="@+id/tfGeburtsdatum"
                 android:layout_weight="1"
-                android:hint="dd.mm.yyyy" />
+                android:hint="dd.mm.yyyy"
+                android:text="10.10.2000" />
 
         </LinearLayout>
 
@@ -114,7 +118,8 @@
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/tfGeburtsort"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:text="Ort1" />
         </LinearLayout>
 
         <LinearLayout
@@ -132,7 +137,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/ButtonWeiblich"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:checked="true" />
 
                 <RadioButton
                     android:text="Männlich"

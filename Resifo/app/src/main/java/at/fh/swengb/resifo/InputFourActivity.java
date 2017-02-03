@@ -45,7 +45,7 @@ public class InputFourActivity extends Activity {
             pers.setPlz(plz);
             pers.setOrt(ort);
 
-            Intent intent = new Intent(this, MainActivity.class); //TO DETAILS PAGE
+            Intent intent = new Intent(this, SummaryActivity.class); //TO DETAILS PAGE
             Bundle bundle = new Bundle();
             bundle.putSerializable("Person", pers);
             intent.putExtras(bundle);

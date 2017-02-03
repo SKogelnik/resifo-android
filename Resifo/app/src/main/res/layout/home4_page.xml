@@ -18,7 +18,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tvUnterkunft"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textAlignment="center" />
         </LinearLayout>
 
         <LinearLayout
@@ -39,7 +41,8 @@
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/tfStreet"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:text="Street" />
         </LinearLayout>
 
         <LinearLayout
@@ -60,7 +63,8 @@
                 android:ems="10"
                 android:id="@+id/tfhousenumber"
                 android:layout_weight="1"
-                android:inputType="number" />
+                android:inputType="number"
+                android:text="50" />
         </LinearLayout>
 
         <LinearLayout
@@ -81,7 +85,8 @@
                 android:ems="10"
                 android:id="@+id/tfpostleitzahl"
                 android:layout_weight="1"
-                android:inputType="number" />
+                android:inputType="number"
+                android:text="5050" />
         </LinearLayout>
 
         <LinearLayout
@@ -102,7 +107,8 @@
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/tfOrt"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:text="Ort2" />
         </LinearLayout>
     </LinearLayout>
 

@@ -18,7 +18,7 @@ public class Person implements Serializable{
     String zmr;
 
     //Reisedokument
-    Integer dokNummer;
+    String dokNummer;
     String ausstellDat;
     String ausstellBeh;
 
@@ -113,11 +113,11 @@ public class Person implements Serializable{
         this.zmr = zmr;
     }
 
-    public Integer getDokNummer() {
+    public String getDokNummer() {
         return dokNummer;
     }
 
-    public void setDokNummer(Integer dokNummer) {
+    public void setDokNummer(String dokNummer) {
         this.dokNummer = dokNummer;
     }
 

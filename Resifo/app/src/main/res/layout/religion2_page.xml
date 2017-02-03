@@ -26,7 +26,8 @@
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/tfReligionsbekenntnis"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:text="röm. kath." />
         </LinearLayout>
 
         <LinearLayout
@@ -47,7 +48,8 @@
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/tfFamilienstand"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:text="Nix" />
         </LinearLayout>
 
         <LinearLayout
@@ -68,7 +70,8 @@
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/tfStaatsangehoerigkeit"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:text="Österreich" />
         </LinearLayout>
 
         <LinearLayout
