@@ -1,6 +1,8 @@
 package at.fh.swengb.resifo;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -79,4 +81,55 @@ public class DBHandler extends SQLiteOpenHelper {
         onCreate(db);
 
     }
+    //insert
+    public void addTable(Person person) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(VORNAME, person.getVorname());
+        values.put(NACHNAME,person.getNachname());
+        values.put(NACHNAMEALT,person.getOldNachname());
+        values.put(GEBURTSTDATUM,person.getGeburtsdatum());
+        values.put(GEBURTSORT, person.getGeburtsort());
+        values.put(GESCHLECHT, person.getGeschlecht());
+        values.put(RELIGION, person.getReligion());
+        values.put(FAMILIENSTAND, person.getFamilienstand());
+        values.put(NATION, person.getNation());
+        values.put(ZMR, person.getZmr());
+        values.put(DOKNUMMER, person.getDokNummer());
+        values.put(AUSSTELLDATUM, person.getAusstellDat());
+        values.put(AUSSTELLBEHOERDE, person.getAusstellBeh());
+        values.put(STRASSE, person.getStrasse());
+        values.put(HAUSNUMMER, person.getHausnr());
+        values.put(PLZ, person.getPlz());
+        values.put(ORT, person.getOrt());
+
+        // Inserting Row
+        db.insert(DATABASE_NAME, null, values);
+        // Closing database connection
+        db.close();
+    }
+    /*
+    //READ
+    public Person getPerson(int id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(DATABASE_NAME, new String[] { KEY_ID,
+                        VORNAME, NACHNAME, ZMR }, KEY_ID + "=?",
+                new String[] { String.valueOf(id) }, null, null, null, null);
+        if (cursor != null)
+            cursor.moveToFirst();
+        Person contact = new Person(Integer.parseInt(cursor.getString(0)),
+                cursor.getString(1), cursor.getString(2));
+// return shop
+        return contact;
+    }
+*/
+    // Deleting a person
+    public void deletePerson(Person person) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(DATABASE_NAME, KEY_ID + " = ?",
+                new String[] { String.valueOf(person.getDokNummer()), });
+        db.close();
+    }
+
+
 }
