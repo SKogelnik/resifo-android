@@ -82,7 +82,7 @@ public class SummaryActivity extends Activity{
         DBHandler db = new DBHandler(this);
         db.addTable(pers);
 
-        Intent intent = new Intent(this, InputTwoActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }
