@@ -47,16 +47,14 @@ public class InputTwoActivity extends Activity {
             pers.setNation(nation);
             pers.setZmr(zmr);
 
-            Intent intent = new Intent(this, InputTwoActivity.class);
+            Intent intent = new Intent(this, InputThreeActivity.class);
             Bundle bundle = new Bundle();
             bundle.putSerializable("Person", pers);
             intent.putExtras(bundle);
             startActivity(intent);
         }
         else
-        {
             Toast.makeText(this,"Alle Felder ausfüllen!", Toast.LENGTH_LONG).show();
-        }
 
 
     }

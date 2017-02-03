@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
@@ -49,30 +50,38 @@ public class InputOneActivity extends Activity {
 
     public void onNextPage(View view) {
         //Befüllen des Personen Objekts
-        pers.setVorname(tfVorname.getText().toString());
-        pers.setNachname(tfNachname.getText().toString());
-        pers.setOldNachname(tfOldNachname.getText().toString());
+        String vorname = tfVorname.getText().toString();
+        String nachname = tfNachname.getText().toString();
+        String oldNachname = tfOldNachname.getText().toString();
+        String geburtsort = tfGebOrt.getText().toString();
+        String geschlecht = "männlich"; //TODO
+        String geburtsDat = tfGebDat.getText().toString();
 
-        if (isLegalDate(tfGebDat.getText().toString())) {
-            pers.setGeburtsdatum(tfGebDat.getText().toString()); //DATE(?)
+
+
+        if (!(vorname.isEmpty() || nachname.isEmpty() || oldNachname.isEmpty() ||
+                geburtsort.isEmpty() || geschlecht.isEmpty()))
+        {
+            if (isLegalDate(geburtsDat)) {
+                pers.setGeburtsdatum(geburtsDat);
+
+                pers.setVorname(vorname);
+                pers.setNachname(nachname);
+                pers.setOldNachname(oldNachname);
+                pers.setGeburtsort(geburtsort);
+                pers.setGeschlecht(geschlecht);
+
+                Intent intent = new Intent(this, InputTwoActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("Person", pers);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+            else
+                Toast.makeText(this,"Ungültiges Datumsformat!", Toast.LENGTH_LONG).show();
         }
         else
-        {
-            tfGebDat = (EditText) findViewById(R.id.tfGeburtsdatum);
-            tfGebDat.setText("ungueltiges Datum");
-            //DONT START ACTIVITY(INTENT)
+            Toast.makeText(this,"Alle Felder ausfüllen!", Toast.LENGTH_LONG).show();
 
-        }
-
-        pers.setGeburtsort(tfGebOrt.getText().toString());
-
-        pers.setGeschlecht("männlich");
-
-
-        Intent intent = new Intent(this, InputTwoActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putSerializable("Person", pers);
-        intent.putExtras(bundle);
-        startActivity(intent);
     }
 }

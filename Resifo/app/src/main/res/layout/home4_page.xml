@@ -57,10 +57,10 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/tfhousenumber"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:inputType="number" />
         </LinearLayout>
 
         <LinearLayout
@@ -78,10 +78,10 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/tfpostleitzahl"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:inputType="number" />
         </LinearLayout>
 
         <LinearLayout

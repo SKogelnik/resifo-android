@@ -19,13 +19,13 @@ public class Person implements Serializable{
 
     //Reisedokument
     Integer dokNummer;
-    Date ausstellDat;
-    String ausstelBeh;
+    String ausstellDat;
+    String ausstellBeh;
 
     //Unterkunft
     String strasse;
-    Integer hausnr;
-    Integer plz;
+    String hausnr;
+    String plz;
     String ort;
 
 
@@ -121,20 +121,20 @@ public class Person implements Serializable{
         this.dokNummer = dokNummer;
     }
 
-    public Date getAusstellDat() {
+    public String getAusstellDat() {
         return ausstellDat;
     }
 
-    public void setAusstellDat(Date ausstellDat) {
+    public void setAusstellDat(String ausstellDat) {
         this.ausstellDat = ausstellDat;
     }
 
-    public String getAusstelBeh() {
-        return ausstelBeh;
+    public String getAusstellBeh() {
+        return ausstellBeh;
     }
 
-    public void setAusstelBeh(String ausstelBeh) {
-        this.ausstelBeh = ausstelBeh;
+    public void setAusstellBeh(String ausstellBeh) {
+        this.ausstellBeh = ausstellBeh;
     }
 
     public String getStrasse() {
@@ -145,19 +145,19 @@ public class Person implements Serializable{
         this.strasse = strasse;
     }
 
-    public Integer getHausnr() {
+    public String getHausnr() {
         return hausnr;
     }
 
-    public void setHausnr(Integer hausnr) {
+    public void setHausnr(String hausnr) {
         this.hausnr = hausnr;
     }
 
-    public Integer getPlz() {
+    public String getPlz() {
         return plz;
     }
 
-    public void setPlz(Integer plz) {
+    public void setPlz(String plz) {
         this.plz = plz;
     }
 
