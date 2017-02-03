@@ -6,6 +6,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * Created by fabian on 03.02.17.
@@ -130,6 +133,30 @@ public class DBHandler extends SQLiteOpenHelper {
                 new String[] { String.valueOf(person.getDokNummer()), });
         db.close();
     }
+
+
+    // Getting All Persons
+    public List<Person> getAllPersons() {
+        List personList = new ArrayList<>();
+// Select All Query
+        String selectQuery = "SELECT "+KEY_ID+","+VORNAME+","+NACHNAME+" FROM " + DATABASE_NAME;
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+// looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                List list= new ArrayList();
+                list.add(Integer.parseInt(cursor.getString(0)));
+                list.add(cursor.getString(1));
+                list.add(cursor.getString(2));
+// Adding contact to list
+                personList.add(list);
+            } while (cursor.moveToNext());
+        }
+// return contact list
+        return personList;
+    }
+
 
 
 }
