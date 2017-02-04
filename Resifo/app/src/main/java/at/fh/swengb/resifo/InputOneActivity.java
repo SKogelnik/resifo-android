@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -54,7 +55,7 @@ public class InputOneActivity extends Activity {
         String nachname = tfNachname.getText().toString();
         String oldNachname = tfOldNachname.getText().toString();
         String geburtsort = tfGebOrt.getText().toString();
-        String geschlecht = "männlich"; //TODO
+        String geschlecht = ((RadioButton)findViewById(rgGeschlecht.getCheckedRadioButtonId())).getText().toString(); //TODO
         String geburtsDat = tfGebDat.getText().toString();
 
 

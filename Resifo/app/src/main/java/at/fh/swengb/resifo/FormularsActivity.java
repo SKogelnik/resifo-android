@@ -32,6 +32,7 @@ public class FormularsActivity extends Activity implements AdapterView.OnItemCli
       //  Intent intent = new Intent(view.getContext(),DetailsActivity.class);
         Intent intent = new Intent(view.getContext(),DetailsActivity.class);
         intent.putExtra("person", /*(Parcelable)*/ selectedPerson);
+        startActivity(intent);
 
     }
 
