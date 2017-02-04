@@ -13,11 +13,11 @@ import java.util.List;
  */
 public class CustomAdapter extends android.widget.BaseAdapter {
 
-    List listPersons;
+    List<List> listPersons;
     Context context;
     LayoutInflater inflter;
 
-    public CustomAdapter(Context applicationContext, List<Person> listPersons) {
+    public CustomAdapter(Context applicationContext, List<List> listPersons) {
         this.context = applicationContext;
         this.listPersons= listPersons;
         inflter = (LayoutInflater.from(applicationContext));
@@ -47,9 +47,8 @@ public class CustomAdapter extends android.widget.BaseAdapter {
         TextView viewNachname=(TextView)view.findViewById(R.id.tvRowNachname);
 
         //person = listPersons.get(i);
-        viewVorname.setText(listPersons.get(i).toString());
-        //viewNachname.setText(person.getNachname());
-
+        viewVorname.setText(listPersons.get(i).get(1).toString());
+        viewNachname.setText(listPersons.get(i).get(2).toString());
 
         return view;
     }
