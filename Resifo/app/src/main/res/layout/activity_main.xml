@@ -52,7 +52,8 @@
                 android:text="Zeige Formulare"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/buttonLoadFormular" />
+                android:id="@+id/buttonLoadFormular"
+                android:onClick="onShowFormulars"/>
 
             <Button
                 android:text="Über"
