@@ -27,9 +27,9 @@ public class FormularsActivity extends Activity implements AdapterView.OnItemCli
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        String selectedPerson = listPerson.get(i).toString();
-        Intent intent = new Intent(view.getContext(),ShowPerson.class);
-        intent.putExtra("person", /*(Parcelable)*/ selectedPerson); //TODO: fix pls
+        //String selectedPerson = listPerson.get(i).toString();
+        Intent intent = new Intent(view.getContext(),DetailsActivity.class);
+        //intent.putExtra("person", /*(Parcelable)*/ selectedPerson); //TODO: fix pls
         startActivity(intent);
 
     }
@@ -48,6 +48,7 @@ public class FormularsActivity extends Activity implements AdapterView.OnItemCli
 
         myAdapter = new CustomAdapter(this, listPerson);
         myListView.setAdapter(myAdapter);
+        myListView.setOnItemClickListener(this);
     }
 
 }
