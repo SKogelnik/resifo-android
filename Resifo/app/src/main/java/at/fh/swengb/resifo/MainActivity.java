@@ -16,10 +16,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        DBHandler db = new DBHandler(this);
-        List liste = db.getAllPersons();
+      //  DBHandler db = new DBHandler(this);
+      //  List liste = db.getAllPersons();
 
-        List testid = (List)liste.get(0);
+      //  List testid = (List)liste.get(0);
 
     }
 

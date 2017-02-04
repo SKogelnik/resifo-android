@@ -31,8 +31,8 @@ public class DetailsActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent = this.getIntent();
-        Bundle bundle = intent.getExtras();
-        Integer index = 1;  //TODO: mach aus bundle den index für pers
+
+        Integer index = Integer.parseInt(intent.getStringExtra("person"));
 
         DBHandler db = new DBHandler(this);
 

@@ -21,16 +21,17 @@ public class FormularsActivity extends Activity implements AdapterView.OnItemCli
 
     private ListView myListView;
 
-    private List listPerson;
+    private List<List> listPerson;
 
     private CustomAdapter myAdapter;
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        //String selectedPerson = listPerson.get(i).toString();
+        List aPerson = listPerson.get(i);
+        String selectedPerson = aPerson.get(0).toString();
+      //  Intent intent = new Intent(view.getContext(),DetailsActivity.class);
         Intent intent = new Intent(view.getContext(),DetailsActivity.class);
-        //intent.putExtra("person", /*(Parcelable)*/ selectedPerson); //TODO: hier irgendwo einen index weitergeben
-        startActivity(intent);
+        intent.putExtra("person", /*(Parcelable)*/ selectedPerson);
 
     }
 
