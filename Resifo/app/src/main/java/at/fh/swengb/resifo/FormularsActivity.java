@@ -29,7 +29,7 @@ public class FormularsActivity extends Activity implements AdapterView.OnItemCli
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         //String selectedPerson = listPerson.get(i).toString();
         Intent intent = new Intent(view.getContext(),DetailsActivity.class);
-        //intent.putExtra("person", /*(Parcelable)*/ selectedPerson); //TODO: fix pls
+        //intent.putExtra("person", /*(Parcelable)*/ selectedPerson); //TODO: hier irgendwo einen index weitergeben
         startActivity(intent);
 
     }
