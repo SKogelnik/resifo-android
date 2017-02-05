@@ -103,11 +103,12 @@
         android:gravity="bottom">
 
         <Button
-            android:text="Abbrechen"
+            android:text="Zurück"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/buttonCancelReligionPage"
-            android:layout_weight="1" />
+            android:id="@+id/btnBack"
+            android:layout_weight="1"
+            android:onClick="onBack" />
 
         <Button
             android:text="OK"

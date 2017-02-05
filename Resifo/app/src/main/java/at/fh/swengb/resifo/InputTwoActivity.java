@@ -30,6 +30,11 @@ public class InputTwoActivity extends Activity {
         tfFamilienstand = (EditText)findViewById(R.id.tfFamilienstand);
         tfNation = (EditText)findViewById(R.id.tfStaatsangehoerigkeit);
         tfZMR = (EditText)findViewById(R.id.tfZMRZahl);
+
+        tfReligion.setText(pers.getReligion());
+        tfFamilienstand.setText(pers.getFamilienstand());
+        tfNation.setText(pers.getNation());
+        tfZMR.setText(pers.getZmr());
     }
 
     public void onNextPage(View view) {
@@ -56,6 +61,26 @@ public class InputTwoActivity extends Activity {
         else
             Toast.makeText(this,"Alle Felder ausfüllen!", Toast.LENGTH_LONG).show();
 
+
+    }
+
+    public void onBack(View view)
+    {
+        String religion = tfReligion.getText().toString();
+        String familienstand = tfFamilienstand.getText().toString();
+        String nation = tfNation.getText().toString();
+        String zmr = tfZMR.getText().toString();
+
+        pers.setReligion(religion);
+        pers.setFamilienstand(familienstand);
+        pers.setNation(nation);
+        pers.setZmr(zmr);
+
+        Intent intent = new Intent(this, InputOneActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("Person", pers);
+        intent.putExtras(bundle);
+        startActivity(intent);
 
     }
 

@@ -47,7 +47,7 @@
                 android:id="@+id/ButtonnewFormular"
                 android:onClick="onNewFormular"
                 android:layout_margin="10dp"
-                style="@android:style/Widget.Holo.Button.Small" />
+                style="@style/btnStyle" />
 
             <Button
                 android:text="Zeige Formulare"
@@ -64,7 +64,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/buttonShowContact"
                 android:onClick="onAbout"
-                android:layout_margin="10dp" />
+                android:layout_margin="10dp"
+                style="@style/btnStyle" />
         </LinearLayout>
 
     </LinearLayout>

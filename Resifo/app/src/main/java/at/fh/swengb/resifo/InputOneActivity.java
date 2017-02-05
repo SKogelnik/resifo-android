@@ -23,6 +23,8 @@ public class InputOneActivity extends Activity {
     EditText tfGebDat;
     EditText tfGebOrt;
     RadioGroup rgGeschlecht;
+    RadioButton rbMann;
+    RadioButton rbFrau;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,10 @@ public class InputOneActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.input1_page);
 
+        Intent intent = this.getIntent();
+        Bundle bundle = intent.getExtras();
+        pers = (Person)bundle.getSerializable("Person");
+
         
         tfVorname = (EditText)findViewById(R.id.tfVorname);
         tfNachname = (EditText)findViewById(R.id.tfNachname);
@@ -38,8 +44,23 @@ public class InputOneActivity extends Activity {
         tfGebDat = (EditText)findViewById(R.id.tfGeburtsdatum);
         tfGebOrt = (EditText)findViewById(R.id.tfGeburtsort);
         rgGeschlecht = (RadioGroup) findViewById(R.id.rgGeschlecht);
+        rbFrau=(RadioButton)findViewById(R.id.ButtonWeiblich);
+        rbMann=(RadioButton)findViewById(R.id.ButtonMaennlich);
 
-        pers = new Person();
+
+
+        tfVorname.setText(pers.getVorname());
+        tfNachname.setText(pers.getNachname());
+        tfOldNachname.setText(pers.getOldNachname());
+        tfGebDat.setText(pers.getGeburtsdatum());
+        tfGebOrt.setText(pers.getGeburtsort());
+
+        if(pers.getGeschlecht()==rbMann.getText().toString())
+            rbMann.setChecked(true);
+        else if(pers.getGeschlecht()==rbFrau.getText().toString())
+            rbFrau.setChecked(true);
+
+
     }
 
     boolean isLegalDate(String s) {

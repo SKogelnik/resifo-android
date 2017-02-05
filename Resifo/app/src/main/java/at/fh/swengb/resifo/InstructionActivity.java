@@ -32,9 +32,13 @@ public class InstructionActivity extends Activity{
     }
 
     public void onUnderstand(View view) {
-        Intent myIntent = new Intent(this, InputOneActivity.class);
+        Person pers = new Person();
 
-        this.startActivity(myIntent);
+        Intent intent = new Intent(this, InputOneActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("Person", pers);
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
 
 }

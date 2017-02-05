@@ -82,9 +82,7 @@ public class Person implements Serializable{
         this.geburtsdatum = geburtsdatum;
     }
 
-    public String getGeschlecht() {
-        return geschlecht;
-    }
+    public String getGeschlecht() { return geschlecht;  }
 
     public void setGeschlecht(String geschlecht) {
         this.geschlecht = geschlecht;
