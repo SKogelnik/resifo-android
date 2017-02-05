@@ -3,13 +3,15 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#ff0000</item>
+        <item name="colorPrimary">#FF4081</item>
         <item name="colorPrimaryDark">#444444</item>
         <item name="colorAccent">#444444</item>
+
     </style>
 
 
     <style name="btnStyle" parent="@android:style/Widget.Holo.Button.Small">
+        <item name="android:background">#ff5656</item>
         <!--<item name="android:background">#00ff00</item>-->
     </style>
 

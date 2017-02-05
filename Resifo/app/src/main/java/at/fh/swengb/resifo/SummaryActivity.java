@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SummaryActivity extends Activity{
     Person pers;
@@ -100,6 +101,8 @@ public class SummaryActivity extends Activity{
             db.updatePerson(Integer.parseInt(index),pers);
         }
         db.close();
+
+        Toast.makeText(this, "Formular gespeichert!", Toast.LENGTH_LONG).show();
 
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
