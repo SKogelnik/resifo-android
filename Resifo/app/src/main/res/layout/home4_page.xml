@@ -124,14 +124,16 @@
             android:layout_height="wrap_content"
             android:id="@+id/buttonCancelHomePage"
             android:layout_weight="1"
-            android:onClick="onBack" />
+            android:onClick="onBack"
+            style="@style/btnStyle" />
 
         <Button
-            android:text="OK"
+            android:text="Weiter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/buttonOKHomePage"
             android:layout_weight="1"
-            android:onClick="onNextPage" />
+            android:onClick="onNextPage"
+            style="@style/btnStyle" />
     </LinearLayout>
 </LinearLayout>
