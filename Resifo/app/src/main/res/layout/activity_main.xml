@@ -47,7 +47,8 @@
                 android:id="@+id/ButtonnewFormular"
                 android:onClick="onNewFormular"
                 android:layout_margin="10dp"
-                style="@style/btnStyle" />
+                style="@style/btnStyle"
+                android:background="@drawable/buttons" />
 
             <Button
                 android:text="Zeige Formulare"
@@ -56,7 +57,8 @@
                 android:id="@+id/buttonLoadFormular"
                 android:onClick="onShowFormulars"
                 android:layout_margin="10dp"
-                style="@style/btnStyle" />
+                style="@style/btnStyle"
+                android:background="@drawable/buttons" />
 
             <Button
                 android:text="Über"
@@ -65,7 +67,8 @@
                 android:id="@+id/buttonShowContact"
                 android:onClick="onAbout"
                 android:layout_margin="10dp"
-                style="@style/btnStyle" />
+                style="@style/btnStyle"
+                android:background="@drawable/buttons" />
         </LinearLayout>
 
     </LinearLayout>
