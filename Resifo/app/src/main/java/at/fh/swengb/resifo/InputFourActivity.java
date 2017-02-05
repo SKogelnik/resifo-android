@@ -28,6 +28,12 @@ public class InputFourActivity extends Activity {
         tfHausNr = (EditText)findViewById(R.id.tfhousenumber);
         tfPLZ = (EditText)findViewById(R.id.tfpostleitzahl);
         tfOrt = (EditText)findViewById(R.id.tfOrt);
+
+        tfStrasse.setText(pers.getStrasse());
+        tfHausNr.setText(pers.getHausnr());
+        tfPLZ.setText(pers.getPlz());
+        tfOrt.setText(pers.getOrt());
+
     }
 
     public void onNextPage(View view) {
@@ -54,8 +60,25 @@ public class InputFourActivity extends Activity {
         else
             Toast.makeText(this,"Alle Felder ausfüllen!", Toast.LENGTH_LONG).show();
 
-
-
-
     }
+
+    public void onBack(View view)
+    {
+        String strasse = tfStrasse.getText().toString();
+        String hausnr = tfHausNr.getText().toString();
+        String plz = tfPLZ.getText().toString();
+        String ort = tfOrt.getText().toString();
+
+        pers.setStrasse(strasse);
+        pers.setHausnr(hausnr);
+        pers.setPlz(plz);
+        pers.setOrt(ort);
+
+        Intent intent = new Intent(this, InputThreeActivity.class); //TO DETAILS PAGE
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("Person", pers);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
+
 }

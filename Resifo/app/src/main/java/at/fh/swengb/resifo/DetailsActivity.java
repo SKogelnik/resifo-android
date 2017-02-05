@@ -36,7 +36,7 @@ public class DetailsActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent = this.getIntent();
 
-        index = Integer.parseInt(intent.getStringExtra("person"));
+        index = Integer.parseInt(intent.getStringExtra("index"));
 
         DBHandler db = new DBHandler(this);
 
@@ -48,8 +48,8 @@ public class DetailsActivity extends Activity {
         Button btnChange = (Button)findViewById(R.id.btnChange);
         Button btnOk = (Button)findViewById(R.id.btnOk);
         Button btnDel = (Button)findViewById(R.id.btnDelete);
-        btnDel.setVisibility(View.GONE);
-        btnOk.setVisibility(View.VISIBLE);
+        btnDel.setVisibility(View.VISIBLE);
+        btnOk.setVisibility(View.GONE);
         btnChange.setVisibility(View.VISIBLE);
 
         tvVorname = (TextView)findViewById(R.id.tvDetailsVorName);

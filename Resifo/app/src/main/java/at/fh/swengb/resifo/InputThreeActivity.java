@@ -32,6 +32,10 @@ public class InputThreeActivity extends Activity{
         tfRNummer = (EditText)findViewById(R.id.tfNummer);
         tfAusstellungsdat = (EditText)findViewById(R.id.tfAusstellungsdatum);
         tfBehoerde = (EditText)findViewById(R.id.tfBehoerde);
+
+        tfRNummer.setText(pers.getDokNummer());
+        tfAusstellungsdat.setText(pers.getAusstellDat());
+        tfBehoerde.setText(pers.getAusstellBeh());
     }
 
     boolean isLegalDate(String s) {
@@ -66,6 +70,23 @@ public class InputThreeActivity extends Activity{
         else
             Toast.makeText(this,"Alle Felder ausfüllen!", Toast.LENGTH_LONG).show();
 
+
+    }
+
+    public void onBack(View view) {
+        String dokNummer = tfRNummer.getText().toString();
+        String ausstellDat = tfAusstellungsdat.getText().toString();
+        String behoerde = tfBehoerde.getText().toString();
+
+        pers.setDokNummer(dokNummer);
+        pers.setAusstellDat(ausstellDat);
+        pers.setAusstellBeh(behoerde);
+
+        Intent intent = new Intent(this, InputTwoActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("Person", pers);
+        intent.putExtras(bundle);
+        startActivity(intent);
 
     }
 }
