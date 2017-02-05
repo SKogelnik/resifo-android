@@ -447,7 +447,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/btnOk"
             android:layout_weight="1"
-            android:onClick="onSaveForm" />
+            android:onClick="onSaveForm"
+            style="@style/btnStyle" />
 
         <Button
             android:text="Ändern"
@@ -455,7 +456,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/btnChange"
             android:layout_weight="1"
-            android:onClick="onChangeForm" />
+            android:onClick="onChangeForm"
+            style="@style/btnStyle" />
 
         <Button
             android:text="delete"
@@ -463,7 +465,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/btnDelete"
             android:layout_weight="1"
-            android:onClick="onDeleteForm" />
+            android:onClick="onDeleteForm"
+            style="@style/btnStyle" />
     </LinearLayout>
 
 </LinearLayout>

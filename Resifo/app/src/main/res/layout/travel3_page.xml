@@ -104,14 +104,16 @@
             android:layout_height="wrap_content"
             android:id="@+id/buttonCancelTravelPage"
             android:layout_weight="1"
-            android:onClick="onBack" />
+            android:onClick="onBack"
+            style="@style/btnStyle" />
 
         <Button
-            android:text="OK"
+            android:text="Weiter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/buttonOKTravelPage"
             android:layout_weight="1"
-            android:onClick="onNextPage" />
+            android:onClick="onNextPage"
+            style="@style/btnStyle" />
     </LinearLayout>
 </LinearLayout>
