@@ -46,7 +46,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/ButtonnewFormular"
                 android:onClick="onNewFormular"
-                android:layout_margin="10dp" />
+                android:layout_margin="10dp"
+                style="@android:style/Widget.Holo.Button.Small" />
 
             <Button
                 android:text="Zeige Formulare"
@@ -54,7 +55,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/buttonLoadFormular"
                 android:onClick="onShowFormulars"
-                android:layout_margin="10dp" />
+                android:layout_margin="10dp"
+                style="@style/btnStyle" />
 
             <Button
                 android:text="Über"
