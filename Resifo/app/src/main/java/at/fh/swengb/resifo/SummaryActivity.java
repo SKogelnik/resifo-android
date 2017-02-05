@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class SummaryActivity extends Activity{
@@ -38,6 +39,11 @@ public class SummaryActivity extends Activity{
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details);
+
+        Button btnOk = (Button)findViewById(R.id.btnDelete);
+        Button btnDel = (Button)findViewById(R.id.btnOk);
+        btnDel.setVisibility(View.VISIBLE);
+        btnOk.setVisibility(View.GONE);
 
         tvVorname = (TextView)findViewById(R.id.tvDetailsVorName);
         tvNachname = (TextView)findViewById(R.id.tvDetailsNachname);

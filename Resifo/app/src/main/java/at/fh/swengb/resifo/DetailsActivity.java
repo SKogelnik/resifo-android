@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -29,11 +30,13 @@ public class DetailsActivity extends Activity {
     TextView tvPLZ;
     TextView tvOrt;
 
+    int index;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent = this.getIntent();
 
-        Integer index = Integer.parseInt(intent.getStringExtra("person"));
+        index = Integer.parseInt(intent.getStringExtra("person"));
 
         DBHandler db = new DBHandler(this);
 
@@ -41,6 +44,11 @@ public class DetailsActivity extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details);
+
+        Button btnOk = (Button)findViewById(R.id.btnDelete);
+        Button btnDel = (Button)findViewById(R.id.btnOk);
+        btnDel.setVisibility(View.GONE);
+        btnOk.setVisibility(View.VISIBLE);
 
         tvVorname = (TextView)findViewById(R.id.tvDetailsVorName);
         tvNachname = (TextView)findViewById(R.id.tvDetailsNachname);
@@ -77,8 +85,6 @@ public class DetailsActivity extends Activity {
         tvHausNr.setText(pers.getHausnr());
         tvPLZ.setText(pers.getPlz());
         tvOrt.setText(pers.getOrt());
-
-
     }
 
     public void onSaveForm(View view)
@@ -91,7 +97,7 @@ public class DetailsActivity extends Activity {
     public void onDeleteForm(View view)
     {
         DBHandler db = new DBHandler(this);
-        db.deletePerson(pers);
+        db.deletePerson(index);
 
         Intent intent = new Intent(this, FormularsActivity.class);
         startActivity(intent);

@@ -10,10 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * Created by fabian on 03.02.17.
- */
-
 public class DBHandler extends SQLiteOpenHelper {
 
 
@@ -143,40 +139,40 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
     // Deleting a person
-    public void deletePerson(Person person) {
+    public void deletePerson(int i) {
+
         SQLiteDatabase db = this.getWritableDatabase();
+
+
         db.delete(DATABASE_NAME, KEY_ID + " =?",
-                new String[] { String.valueOf(person.getDokNummer()), });
+                new String[] { String.valueOf(i), });
         db.close();
 
         System.out.println("deletePerson was called.");
-
-        //TODO: this piece of shit wont delete the person
     }
 
 
     // Getting All Persons
     public List<List> getAllPersons() {
         List personList = new ArrayList<>();
-// Select All Query
+
+        // Select All Query
         String selectQuery = "SELECT "+KEY_ID+","+VORNAME+","+NACHNAME+" FROM " + DATABASE_NAME;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
-// looping through all rows and adding to list
+
+        // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
                 List list= new ArrayList();
                 list.add(Integer.parseInt(cursor.getString(0)));
                 list.add(cursor.getString(1));
                 list.add(cursor.getString(2));
-// Adding contact to list
+
+                // Adding contact to list
                 personList.add(list);
             } while (cursor.moveToNext());
         }
-// return contact list
         return personList;
     }
-
-
-
 }

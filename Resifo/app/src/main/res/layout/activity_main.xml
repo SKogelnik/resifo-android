@@ -16,13 +16,14 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:baselineAligned="false">
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="20dp">
+            android:paddingTop="50dp">
 
             <TextView
                 android:text="Willkommenstext"
@@ -36,46 +37,37 @@
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="50dp">
 
             <Button
                 android:text="Neues Formular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/ButtonnewFormular"
-                android:onClick="onNewFormular" />
+                android:onClick="onNewFormular"
+                android:layout_margin="10dp" />
 
             <Button
                 android:text="Zeige Formulare"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/buttonLoadFormular"
-                android:onClick="onShowFormulars"/>
+                android:onClick="onShowFormulars"
+                android:layout_margin="10dp" />
 
             <Button
                 android:text="Über"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/buttonShowContact"
-                android:onClick="onAbout" />
-
+                android:onClick="onAbout"
+                android:layout_margin="10dp" />
         </LinearLayout>
 
     </LinearLayout>
-
-    <TextView
-        android:text="@string/welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="382dp"
-        android:layout_marginStart="382dp"
-        android:layout_marginTop="153dp"
-        android:id="@+id/textView" />
 
 </RelativeLayout>
