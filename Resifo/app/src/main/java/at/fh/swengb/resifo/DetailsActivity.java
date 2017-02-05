@@ -3,6 +3,7 @@ package at.fh.swengb.resifo;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 
@@ -79,4 +80,21 @@ public class DetailsActivity extends Activity {
 
 
     }
+
+    public void onSaveForm(View view)
+    {
+
+        Intent intent = new Intent(this, FormularsActivity.class);
+        startActivity(intent);
+    }
+
+    public void onDeleteForm(View view)
+    {
+        DBHandler db = new DBHandler(this);
+        db.deletePerson(pers);
+
+        Intent intent = new Intent(this, FormularsActivity.class);
+        startActivity(intent);
+    }
+
 }

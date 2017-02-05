@@ -443,11 +443,19 @@
 
         <Button
             android:text="OK"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/button4"
             android:layout_weight="1"
             android:onClick="onSaveForm" />
+
+        <Button
+            android:text="delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:layout_weight="1"
+            android:onClick="onDeleteForm" />
     </LinearLayout>
 
 </LinearLayout>

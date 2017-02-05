@@ -145,9 +145,13 @@ public class DBHandler extends SQLiteOpenHelper {
     // Deleting a person
     public void deletePerson(Person person) {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(DATABASE_NAME, KEY_ID + " = ?",
+        db.delete(DATABASE_NAME, KEY_ID + " =?",
                 new String[] { String.valueOf(person.getDokNummer()), });
         db.close();
+
+        System.out.println("deletePerson was called.");
+
+        //TODO: this piece of shit wont delete the person
     }
 
 

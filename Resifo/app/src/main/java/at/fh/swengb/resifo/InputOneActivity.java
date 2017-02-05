@@ -55,7 +55,7 @@ public class InputOneActivity extends Activity {
         String nachname = tfNachname.getText().toString();
         String oldNachname = tfOldNachname.getText().toString();
         String geburtsort = tfGebOrt.getText().toString();
-        String geschlecht = ((RadioButton)findViewById(rgGeschlecht.getCheckedRadioButtonId())).getText().toString(); //TODO
+        String geschlecht = ((RadioButton)findViewById(rgGeschlecht.getCheckedRadioButtonId())).getText().toString();
         String geburtsDat = tfGebDat.getText().toString();
 
 
