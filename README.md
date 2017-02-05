@@ -1,14 +1,70 @@
-###Purpose
 
-The purpose of this app is to learn Android Studio by implementing a way to save and reuse the austrian "Meldezettel".
-We created a [Proposal](/Documents/paper_prototype.pdf) which explains how the app should look like.
+<img align="right" src="Documents/logo.png" />
 
 
-###Setup
+## Inhalt
+1. [Description](#Description)
+2. [Prerequisites](#Prerequisites)
+3. [Licenses](#licenses)
+4. [Contributors](#contributors)
+5. [Screenshots](#screenshots)
+6. [FAQ](#faq)
+7. [Release](#release)
 
+
+___
+
+##Description
+This android app is used to fill the austrian "Meldezettel" with your personal data.
+You can view and delete previously saved "Meldezettel"
+___
+
+##Prerequisites
 Used software is android studio. Programming was done in Java and Scala.
 (But mostly Java)
 
-###Prerequisites
+##Licenses
 
-###Licenses
+## Contributors
+Stefan Kogelnik
+
+Fabian Schopper
+
+___
+## Screenshots
+
+###Welcome Screen
+
+<img src="Documents/Screenshots/HomeScreen.png"/>
+
+###Summary Screen
+
+<img src="Documents/Screenshots/SummaryScreen.png"/>
+
+
+###Input Screen
+
+<img src="Documents/Screenshots/InputScreen.png"/>
+
+
+###List of Formulars
+
+<img src="Documents/Screenshots/FormularListScreen.png"/>
+
+
+##FAQ
+F: Gibt es diese App auch für iOs?
+
+A: Nein.
+
+F: Funktioniert diese App auch auf meinem Android 4.0 ?
+
+A: Nein. Wir unterstützen ab API 15.
+
+F: Ich habe einen Fehler gefunden.
+
+A: Gratuliere.
+___
+##Release
+### Version 1.0 ist mit 05.02.2017 released.
+___
