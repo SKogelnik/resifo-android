@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 public class InputTwoActivity extends Activity {
     Person pers;
+    String index;
 
     EditText tfReligion;
     EditText tfFamilienstand;
@@ -21,6 +22,7 @@ public class InputTwoActivity extends Activity {
         Intent intent = this.getIntent();
         Bundle bundle = intent.getExtras();
         pers = (Person)bundle.getSerializable("Person");
+        index = intent.getStringExtra("index");
 
 
         super.onCreate(savedInstanceState);
@@ -56,6 +58,7 @@ public class InputTwoActivity extends Activity {
             Bundle bundle = new Bundle();
             bundle.putSerializable("Person", pers);
             intent.putExtras(bundle);
+            intent.putExtra("index",""+index);
             startActivity(intent);
         }
         else
@@ -80,6 +83,7 @@ public class InputTwoActivity extends Activity {
         Bundle bundle = new Bundle();
         bundle.putSerializable("Person", pers);
         intent.putExtras(bundle);
+        intent.putExtra("index",""+index);
         startActivity(intent);
 
     }

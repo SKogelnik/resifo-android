@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 public class InputFourActivity extends Activity {
     Person pers;
+    String index;
 
     EditText tfStrasse;
     EditText tfHausNr;
@@ -20,6 +21,7 @@ public class InputFourActivity extends Activity {
         Intent intent = this.getIntent();
         Bundle bundle = intent.getExtras();
         pers = (Person)bundle.getSerializable("Person");
+        index = intent.getStringExtra("index");
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home4_page);
@@ -55,6 +57,7 @@ public class InputFourActivity extends Activity {
             Bundle bundle = new Bundle();
             bundle.putSerializable("Person", pers);
             intent.putExtras(bundle);
+            intent.putExtra("index",""+index);
             startActivity(intent);
         }
         else
@@ -78,6 +81,7 @@ public class InputFourActivity extends Activity {
         Bundle bundle = new Bundle();
         bundle.putSerializable("Person", pers);
         intent.putExtras(bundle);
+        intent.putExtra("index",""+index);
         startActivity(intent);
     }
 
