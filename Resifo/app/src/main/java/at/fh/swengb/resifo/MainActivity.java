@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         this.startActivity(myIntent);
     }
 
+
     public void onShowFormulars(View view) {
         Intent intent = new Intent(this, FormularsActivity.class);
 

@@ -45,10 +45,12 @@ public class DetailsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details);
 
-        Button btnOk = (Button)findViewById(R.id.btnDelete);
-        Button btnDel = (Button)findViewById(R.id.btnOk);
+        Button btnChange = (Button)findViewById(R.id.btnChange);
+        Button btnOk = (Button)findViewById(R.id.btnOk);
+        Button btnDel = (Button)findViewById(R.id.btnDelete);
         btnDel.setVisibility(View.GONE);
         btnOk.setVisibility(View.VISIBLE);
+        btnChange.setVisibility(View.VISIBLE);
 
         tvVorname = (TextView)findViewById(R.id.tvDetailsVorName);
         tvNachname = (TextView)findViewById(R.id.tvDetailsNachname);
@@ -102,5 +104,15 @@ public class DetailsActivity extends Activity {
         Intent intent = new Intent(this, FormularsActivity.class);
         startActivity(intent);
     }
+
+    public void onChangeForm (View view)
+    {
+        Intent intent = new Intent(this, InputOneActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("Person", pers);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
+
 
 }

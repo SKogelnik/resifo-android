@@ -54,11 +54,6 @@ proguard/
 # Android Studio captures folder
 captures/
 
-# Intellij
-
-.idea/tasks.xml
-.idea/libraries
-
 # Keystore files
 *.jks
 

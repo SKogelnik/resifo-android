@@ -40,10 +40,12 @@ public class SummaryActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details);
 
-        Button btnOk = (Button)findViewById(R.id.btnDelete);
-        Button btnDel = (Button)findViewById(R.id.btnOk);
-        btnDel.setVisibility(View.VISIBLE);
-        btnOk.setVisibility(View.GONE);
+        Button btnChange = (Button)findViewById(R.id.btnChange);
+        Button btnOk = (Button)findViewById(R.id.btnOk);
+        Button btnDel = (Button)findViewById(R.id.btnDelete);
+        btnDel.setVisibility(View.GONE);
+        btnOk.setVisibility(View.VISIBLE);
+        btnChange.setVisibility(View.GONE);
 
         tvVorname = (TextView)findViewById(R.id.tvDetailsVorName);
         tvNachname = (TextView)findViewById(R.id.tvDetailsNachname);

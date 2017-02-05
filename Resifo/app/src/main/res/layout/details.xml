@@ -450,6 +450,14 @@
             android:onClick="onSaveForm" />
 
         <Button
+            android:text="Ändern"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnChange"
+            android:layout_weight="1"
+            android:onClick="onChangeForm" />
+
+        <Button
             android:text="delete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
