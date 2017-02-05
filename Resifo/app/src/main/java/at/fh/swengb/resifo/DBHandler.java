@@ -134,7 +134,7 @@ public class DBHandler extends SQLiteOpenHelper {
         pers.setHausnr(cursor.getString(15));
         pers.setPlz(cursor.getString(16));
         pers.setOrt(cursor.getString(17));
-// return shop
+
         return pers;
     }
 
@@ -147,8 +147,6 @@ public class DBHandler extends SQLiteOpenHelper {
         db.delete(DATABASE_NAME, KEY_ID + " =?",
                 new String[] { String.valueOf(i), });
         db.close();
-
-        System.out.println("deletePerson was called.");
     }
 
     public void updatePerson(int i, Person pers)
