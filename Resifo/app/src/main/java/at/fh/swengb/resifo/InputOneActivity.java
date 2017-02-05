@@ -16,6 +16,7 @@ import java.util.Date;
 
 public class InputOneActivity extends Activity {
 
+    String index;
     Person pers;
     EditText tfVorname;
     EditText tfNachname;
@@ -36,8 +37,9 @@ public class InputOneActivity extends Activity {
         Intent intent = this.getIntent();
         Bundle bundle = intent.getExtras();
         pers = (Person)bundle.getSerializable("Person");
+        index = intent.getStringExtra("index");
 
-        
+
         tfVorname = (EditText)findViewById(R.id.tfVorname);
         tfNachname = (EditText)findViewById(R.id.tfNachname);
         tfOldNachname = (EditText)findViewById(R.id.tfNameVorEhe);
@@ -97,6 +99,7 @@ public class InputOneActivity extends Activity {
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("Person", pers);
                 intent.putExtras(bundle);
+                intent.putExtra("index",""+index);
                 startActivity(intent);
             }
             else

@@ -36,7 +36,7 @@ public class DetailsActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent = this.getIntent();
 
-        index = Integer.parseInt(intent.getStringExtra("index"));
+        index = Integer.parseInt(intent.getStringExtra("Person"));
 
         DBHandler db = new DBHandler(this);
 
@@ -111,6 +111,7 @@ public class DetailsActivity extends Activity {
         Bundle bundle = new Bundle();
         bundle.putSerializable("Person", pers);
         intent.putExtras(bundle);
+        intent.putExtra("index",""+index);
         startActivity(intent);
     }
 

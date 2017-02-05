@@ -38,6 +38,7 @@ public class InstructionActivity extends Activity{
         Bundle bundle = new Bundle();
         bundle.putSerializable("Person", pers);
         intent.putExtras(bundle);
+        intent.putExtra("index","-1");
         startActivity(intent);
     }
 

@@ -151,6 +151,12 @@ public class DBHandler extends SQLiteOpenHelper {
         System.out.println("deletePerson was called.");
     }
 
+    public void updatePerson(int i, Person pers)
+    {
+        deletePerson(i);
+        addTable(pers);
+    }
+
 
     // Getting All Persons
     public List<List> getAllPersons() {

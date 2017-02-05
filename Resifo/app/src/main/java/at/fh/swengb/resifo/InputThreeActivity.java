@@ -14,6 +14,7 @@ import java.text.SimpleDateFormat;
 public class InputThreeActivity extends Activity{
 
     Person pers;
+    String index;
 
     EditText tfRNummer;
     EditText tfAusstellungsdat;
@@ -25,6 +26,8 @@ public class InputThreeActivity extends Activity{
         Intent intent = this.getIntent();
         Bundle bundle = intent.getExtras();
         pers = (Person)bundle.getSerializable("Person");
+        index = intent.getStringExtra("index");
+
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.travel3_page);
@@ -62,6 +65,7 @@ public class InputThreeActivity extends Activity{
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("Person", pers);
                 intent.putExtras(bundle);
+                intent.putExtra("index",""+index);
                 startActivity(intent);
             }
             else
@@ -86,6 +90,7 @@ public class InputThreeActivity extends Activity{
         Bundle bundle = new Bundle();
         bundle.putSerializable("Person", pers);
         intent.putExtras(bundle);
+        intent.putExtra("index",""+index);
         startActivity(intent);
 
     }

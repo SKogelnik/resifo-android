@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 public class SummaryActivity extends Activity{
     Person pers;
+    String index;
 
     TextView tvVorname;
     TextView tvNachname;
@@ -35,7 +36,7 @@ public class SummaryActivity extends Activity{
         Intent intent = this.getIntent();
         Bundle bundle = intent.getExtras();
         pers = (Person)bundle.getSerializable("Person");
-
+        index = intent.getStringExtra("index");
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details);
@@ -46,6 +47,7 @@ public class SummaryActivity extends Activity{
         btnDel.setVisibility(View.GONE);
         btnOk.setVisibility(View.VISIBLE);
         btnChange.setVisibility(View.GONE);
+        //TODO: Zurück Button
 
         tvVorname = (TextView)findViewById(R.id.tvDetailsVorName);
         tvNachname = (TextView)findViewById(R.id.tvDetailsNachname);
@@ -88,7 +90,16 @@ public class SummaryActivity extends Activity{
     public void onSaveForm(View view)
     {
         DBHandler db = new DBHandler(this);
-        db.addTable(pers);
+
+        if(index.toString()=="-1")
+        {
+            db.addTable(pers);
+        }
+        else
+        {
+            db.updatePerson(Integer.parseInt(index),pers);
+        }
+        db.close();
 
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
