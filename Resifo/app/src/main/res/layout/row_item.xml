@@ -9,28 +9,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvRowNachname"
             android:layout_weight="1"
-            android:clickable="false">
+            android:textSize="25sp"
+            android:textAlignment="textStart" />
 
-            <TextView
-                android:text="TextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tvRowNachname"
-                android:layout_weight="1" />
-
-            <TextView
-                android:text="TextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tvRowVorname"
-                android:layout_weight="1" />
-
-        </LinearLayout>
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvRowVorname"
+            android:layout_weight="1"
+            android:textSize="25sp"
+            android:textAlignment="viewStart" />
 
     </LinearLayout>
 
