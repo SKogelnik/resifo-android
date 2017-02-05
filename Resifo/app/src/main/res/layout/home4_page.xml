@@ -24,7 +24,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -33,7 +33,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView3"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textSize="20sp" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -42,11 +43,12 @@
                 android:ems="10"
                 android:id="@+id/tfStreet"
                 android:layout_weight="1"
-                android:text="Street" />
+                android:text="Street"
+                android:textSize="25sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -55,7 +57,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView4"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textSize="20sp" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -64,11 +67,12 @@
                 android:id="@+id/tfhousenumber"
                 android:layout_weight="1"
                 android:inputType="number"
-                android:text="50" />
+                android:text="50"
+                android:textSize="25sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -77,7 +81,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView5"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textSize="20sp" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -86,11 +91,12 @@
                 android:id="@+id/tfpostleitzahl"
                 android:layout_weight="1"
                 android:inputType="number"
-                android:text="5050" />
+                android:text="5050"
+                android:textSize="25sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -99,7 +105,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView6"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textSize="20sp" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -108,7 +115,8 @@
                 android:ems="10"
                 android:id="@+id/tfOrt"
                 android:layout_weight="1"
-                android:text="Ort2" />
+                android:text="Ort2"
+                android:textSize="25sp" />
         </LinearLayout>
     </LinearLayout>
 
