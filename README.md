@@ -66,7 +66,7 @@ A: Nein. Wir unterstützen ab API 15.
 
 F: Ich habe einen Fehler gefunden.
 
-A: Gratuliere.
+A: Bitte mail an stefan(dot)kogelnik(at)fh-joanneum(dot)at
 ___
 ##Release
 ### Version 1.0 ist mit 05.02.2017 released.
