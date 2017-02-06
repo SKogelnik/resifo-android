@@ -25,6 +25,9 @@ Used software is android studio. Programming was done in Java and Scala.
 
 ##Licenses
 
+https://github.com/SKogelnik/resifo-android/blob/master/LICENSE.txt
+
+
 ## Contributors
 Stefan Kogelnik
 

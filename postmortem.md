@@ -19,7 +19,7 @@ We didnt waste a lot of time on finding bugs. User Input is not checked for sani
 so we dont really know what happens if your name has 999 characters.
 
 
-#####Useability
+#####Usability
 
 Our prototype was very functional with no intentions of beeing userfriendly.
 Towards the end we decided to use some colours and fancy buttons,
